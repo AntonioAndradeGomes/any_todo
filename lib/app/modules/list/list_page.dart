@@ -1,4 +1,5 @@
 import 'package:any_todo/app/modules/list/index.dart';
+import 'package:any_todo/app/modules/list/modals/new_task_widget.dart';
 import 'package:any_todo/app/modules/list/widgets/bottom_button.dart';
 import 'package:any_todo/app/modules/list/widgets/card_task.dart';
 import 'package:any_todo/app/modules/list/widgets/show_completed_widget.dart';
@@ -18,7 +19,11 @@ class ListPage extends StatelessWidget {
           color: controller.listColor,
           child: Center(
             child: BottomButtonWidget(
-              onTap: () {},
+              onTap: () {
+                Get.bottomSheet(
+                  const NewTaskWidget(),
+                );
+              },
             ),
           ),
         ),

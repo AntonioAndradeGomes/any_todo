@@ -15,13 +15,6 @@ class ListController extends GetxController {
 
   Rx<bool> showCompleted = true.obs;
 
-  /* TextEditingController textTaskController = TextEditingController();
-
-  @override
-  onInit() {
-    super.onInit();
-  }*/
-
   RxList<TaskModel> listTask = <TaskModel>[
     TaskModel(
       title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
