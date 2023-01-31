@@ -15,7 +15,12 @@ class ListController extends GetxController {
 
   Rx<bool> showCompleted = true.obs;
 
-  TextEditingController textController = TextEditingController();
+  /* TextEditingController textTaskController = TextEditingController();
+
+  @override
+  onInit() {
+    super.onInit();
+  }*/
 
   RxList<TaskModel> listTask = <TaskModel>[
     TaskModel(
@@ -57,6 +62,11 @@ class ListController extends GetxController {
 
   void changeColorList(Color value) {
     list.color = value;
+    update();
+  }
+
+  void changeNameList(String value) {
+    list.name = value;
     update();
   }
 }

@@ -1,3 +1,4 @@
+import 'package:any_todo/app/modules/list/modals/edit_list_name.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -74,6 +75,9 @@ class PopupMenuListWidget extends StatelessWidget {
             const ListColorsWidget(),
           );
         } else if (value == 2) {
+          Get.bottomSheet(
+            const EditListNameWidget(),
+          );
         } else if (value == 3) {
         } else {
           return;
