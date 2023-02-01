@@ -8,7 +8,7 @@ import 'package:any_todo/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 abstract class AppPages {
-  static String initialRoute = AppRoutes.SPLASH;
+  static String initialRoute = AppRoutes.PROFILE;
 
   static List<GetPage> pages = [
     GetPage(
@@ -33,7 +33,7 @@ abstract class AppPages {
     ),
     GetPage(
       name: AppRoutes.PROFILE,
-      page: () => const ProfilePage(),
+      page: () => ProfilePage(),
       binding: ProfileBinding(),
     ),
     GetPage(
