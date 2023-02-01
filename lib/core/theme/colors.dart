@@ -25,6 +25,7 @@ abstract class AppColors {
   static Color orangeColor = const Color(0xFFFF4500);
   static Color darkCyan = const Color(0xFF008B8B);
   static Color darkOrange = const Color(0xFFFF8C00);
+  static Color greyColor = const Color(0xFF838383);
 
   static List<Color> listTasksColor = [
     greenPollColor,
