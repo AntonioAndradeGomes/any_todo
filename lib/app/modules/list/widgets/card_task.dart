@@ -1,14 +1,18 @@
+import 'package:any_todo/app/modules/list/models/list_model.dart';
 import 'package:any_todo/app/modules/list/models/task_model.dart';
 import 'package:any_todo/core/theme/colors.dart';
+import 'package:any_todo/core/widgets/circle_button_task_widget.dart';
+import 'package:any_todo/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CardTask extends StatelessWidget {
   final TaskModel task;
-  final Color listColor;
+  final ListModel list;
   const CardTask({
     Key? key,
     required this.task,
-    required this.listColor,
+    required this.list,
   }) : super(key: key);
 
   @override
@@ -22,40 +26,40 @@ class CardTask extends StatelessWidget {
       ),
       child: ListTile(
         onTap: () {
-          print('tap');
+          Get.toNamed(
+            AppRoutes.TASK,
+            arguments: {
+              'task': task,
+              'nameList': list.name,
+              'color': list.color,
+            },
+          );
         },
         dense: true,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
-        leading: IconButton(
+        leading: CircleButtonTaskWidget(
+          active: task.endDate != null,
+          colorActive: list.color,
+          colorInactive: AppColors.greyColor,
           onPressed: () {},
-          splashRadius: 20,
-          icon: Icon(
-            task.endDate != null ? Icons.check_circle : Icons.circle_outlined,
-            color: task.endDate != null ? listColor : AppColors.greyColor,
-            size: 30,
-          ),
         ),
         title: Text(
           task.title,
           style: TextStyle(
-            color: task.endDate != null ? listColor : Colors.black,
+            color: task.endDate != null ? list.color : Colors.black,
             fontSize: 15,
             decoration:
                 task.endDate != null ? TextDecoration.lineThrough : null,
           ),
         ),
-        trailing: IconButton(
+        trailing: CircleButtonTaskWidget(
+          active: task.isImportant,
+          colorActive: AppColors.importantColor,
+          colorInactive: AppColors.greyColor,
           onPressed: () {},
-          splashRadius: 20,
-          icon: Icon(
-            !task.isImportant ? Icons.star_border_outlined : Icons.star,
-            size: 30,
-          ),
-          color: !task.isImportant
-              ? AppColors.greyColor
-              : AppColors.importantColor,
+          isStar: true,
         ),
       ),
     );
