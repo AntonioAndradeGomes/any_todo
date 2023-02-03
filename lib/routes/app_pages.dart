@@ -8,7 +8,7 @@ import 'package:any_todo/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 abstract class AppPages {
-  static String initialRoute = AppRoutes.LIST;
+  static String initialRoute = AppRoutes.SPLASH;
 
   static List<GetPage> pages = [
     GetPage(
