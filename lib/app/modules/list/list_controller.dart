@@ -51,6 +51,7 @@ class ListController extends GetxController {
 
   void changeShowCompleted() {
     showCompleted.value = !showCompleted.value;
+    update();
   }
 
   void changeColorList(Color value) {

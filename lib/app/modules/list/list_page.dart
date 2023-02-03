@@ -32,7 +32,7 @@ class ListPage extends StatelessWidget {
           leading: IconButton(
             onPressed: () {},
             icon: const Icon(
-              Icons.arrow_back_ios,
+              Icons.arrow_back_ios_new_rounded,
             ),
             splashRadius: 20,
           ),
@@ -61,40 +61,47 @@ class ListPage extends StatelessWidget {
                 height: 20,
               ),
               Expanded(
-                child: ListView(
-                  children: [
-                    Column(
-                      children: controller.unfinishedList
-                          .map(
-                            (e) => CardTask(
-                              task: e,
-                              listColor: controller.listColor,
-                            ),
-                          )
-                          .toList(),
+                child: Theme(
+                  data: Theme.of(context).copyWith(
+                    colorScheme: ColorScheme.fromSwatch().copyWith(
+                      secondary: controller.listColor,
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    ShowCompletedWidget(
-                      onTap: () {
-                        controller.changeShowCompleted();
-                      },
-                      showCompleted: controller.showCompleted.value,
-                    ),
-                    controller.showCompleted.value
-                        ? Column(
-                            children: controller.finishedList
-                                .map(
-                                  (e) => CardTask(
-                                    task: e,
-                                    listColor: controller.listColor,
-                                  ),
-                                )
-                                .toList(),
-                          )
-                        : const SizedBox(),
-                  ],
+                  ),
+                  child: ListView(
+                    children: [
+                      Column(
+                        children: controller.unfinishedList
+                            .map(
+                              (e) => CardTask(
+                                task: e,
+                                list: controller.list,
+                              ),
+                            )
+                            .toList(),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      ShowCompletedWidget(
+                        onTap: () {
+                          controller.changeShowCompleted();
+                        },
+                        showCompleted: controller.showCompleted.value,
+                      ),
+                      controller.showCompleted.value
+                          ? Column(
+                              children: controller.finishedList
+                                  .map(
+                                    (e) => CardTask(
+                                      task: e,
+                                      list: controller.list,
+                                    ),
+                                  )
+                                  .toList(),
+                            )
+                          : const SizedBox(),
+                    ],
+                  ),
                 ),
               )
             ],
