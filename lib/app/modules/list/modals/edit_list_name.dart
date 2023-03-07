@@ -80,7 +80,7 @@ class _EditListNameWidgetState extends State<EditListNameWidget> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: _controller.listColor,
+                backgroundColor: _controller.listColor,
               ),
               onPressed: () {
                 if (_key.currentState!.validate()) {
