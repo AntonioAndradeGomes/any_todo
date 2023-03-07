@@ -131,7 +131,7 @@ class ProfilePage extends StatelessWidget {
                 width: 200,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: AppColors.orangeColor,
+                    backgroundColor: AppColors.orangeColor,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
@@ -154,7 +154,7 @@ class ProfilePage extends StatelessWidget {
                 width: 200,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: AppColors.orangeColor,
+                    backgroundColor: AppColors.orangeColor,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),

@@ -87,7 +87,7 @@ class TaskPage extends StatelessWidget {
               child: TextButton.icon(
                 onPressed: () {},
                 style: TextButton.styleFrom(
-                  primary: colorList,
+                  backgroundColor: colorList,
                 ),
                 icon: const Icon(
                   Icons.add,
@@ -209,7 +209,7 @@ class TaskPage extends StatelessWidget {
                           width: 15,
                         ),
                         Text(
-                          'Lembrar-me',
+                          'Adicionar uma anotação',
                           style: TextStyle(
                             color: AppColors.greyColor,
                           ),
