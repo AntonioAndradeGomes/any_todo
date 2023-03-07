@@ -18,7 +18,9 @@ class ProfilePage extends StatelessWidget {
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.back();
+          },
         ),
       ),
       body: GestureDetector(
