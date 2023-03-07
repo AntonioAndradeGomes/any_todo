@@ -87,7 +87,7 @@ class TaskPage extends StatelessWidget {
               child: TextButton.icon(
                 onPressed: () {},
                 style: TextButton.styleFrom(
-                  backgroundColor: colorList,
+                  foregroundColor: colorList,
                 ),
                 icon: const Icon(
                   Icons.add,
