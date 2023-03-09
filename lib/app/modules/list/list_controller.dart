@@ -42,6 +42,58 @@ class ListController extends GetxController {
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
     ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: true,
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: false,
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: false,
+      endDate: DateTime.now(),
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: true,
+      endDate: DateTime.now(),
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: true,
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: false,
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: false,
+      endDate: DateTime.now(),
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    TaskModel(
+      title: 'Loren bdakcv basjekjs  abcskjasb anan ascaahslcb',
+      isImportant: true,
+      endDate: DateTime.now(),
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
   ].obs;
 
   List<TaskModel> get unfinishedList =>

@@ -26,7 +26,7 @@ class ShowCompletedWidget extends StatelessWidget {
             height: 25,
             width: 140,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(15),
             ),
             child: Row(

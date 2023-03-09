@@ -14,6 +14,7 @@ final ThemeData appTheme = ThemeData(
   iconTheme: const IconThemeData(
     color: Colors.white,
   ),
+  cardColor: Colors.white,
 );
 
 final ThemeData darkTheme = ThemeData(
@@ -23,9 +24,11 @@ final ThemeData darkTheme = ThemeData(
   useMaterial3: false,
   appBarTheme: const AppBarTheme(
     elevation: 0,
-    backgroundColor: Colors.transparent,
+    backgroundColor: Color.fromRGBO(0, 0, 0, 0),
   ),
+  scaffoldBackgroundColor: Colors.black,
   iconTheme: const IconThemeData(
     color: Colors.white,
   ),
+  cardColor: Colors.grey.shade500,
 );

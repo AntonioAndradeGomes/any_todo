@@ -40,6 +40,7 @@ class BottomButtonWidget extends StatelessWidget {
                   'Adicionar uma tarefa',
                   style: TextStyle(
                     fontSize: 15,
+                    color: Colors.black,
                   ),
                 ),
               ],

@@ -36,6 +36,7 @@ class SocialLoginWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Theme.of(context).brightness);
     return ElevatedButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color>(
@@ -43,12 +44,19 @@ class SocialLoginWidget extends StatelessWidget {
         ),
         overlayColor: loginMethod == LoginMethod.google
             ? MaterialStateProperty.all<Color>(
-                Colors.grey.shade100,
+                Theme.of(context).brightness == Brightness.dark
+                    ? Theme.of(context).primaryColor.withAlpha(30)
+                    : Colors.grey.shade200,
               )
             : null,
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
+            side: Theme.of(context).brightness == Brightness.dark
+                ? const BorderSide(
+                    color: Colors.white,
+                  )
+                : BorderSide.none,
           ),
         ),
       ),

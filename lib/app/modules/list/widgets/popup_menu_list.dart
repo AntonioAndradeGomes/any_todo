@@ -10,6 +10,7 @@ class PopupMenuListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
+      color: Colors.white,
       itemBuilder: (context) => [
         PopupMenuItem(
           value: 1,
@@ -25,6 +26,9 @@ class PopupMenuListWidget extends StatelessWidget {
               ),
               Text(
                 'Mudar a cor da lista',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
             ],
           ),
@@ -43,6 +47,9 @@ class PopupMenuListWidget extends StatelessWidget {
               ),
               Text(
                 'Renomear lista',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
             ],
           ),

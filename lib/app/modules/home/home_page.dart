@@ -52,10 +52,11 @@ class HomePage extends StatelessWidget {
                                 const Flexible(
                                   child: Text(
                                     'Pessoa Nome',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                    ),
                                     maxLines: 2,
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
@@ -347,7 +348,7 @@ class HomePage extends StatelessWidget {
                 leading: const Icon(
                   Icons.post_add_outlined,
                   size: 25,
-                  color: Colors.black,
+                  //color: Colors.black,
                 ),
               ),
             ),

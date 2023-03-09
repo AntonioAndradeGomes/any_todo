@@ -22,7 +22,7 @@ class TapDrop extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              color: onTap == null ? AppColors.greyColor : Colors.black,
+              color: onTap == null ? AppColors.greyColor : null,
               fontWeight: FontWeight.w500,
               fontSize: 18,
             ),
